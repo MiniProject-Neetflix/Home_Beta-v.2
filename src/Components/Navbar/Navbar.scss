@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;500&display=swap');
+
+//Colors
+$SecondaryColor: #eb5757;
+$primaryColor: white;
+
+//Typograpy
+$InterFont: 'Inter', sans-serif;
+$ExtraLight: 200;
+$Light: 300;
+$Regular: 400;
+$Medium: 500;
+$SemiBold: 600;
+$Bold: 700;
+
+
+$redColor: #eb5757;
+$activeInput: #1a73e8;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 100px;
+  padding: 0 100px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .logo {
+      color: $redColor;
+      font-size: 24px;
+      font-weight: $Bold;
+      font-family: $InterFont;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+        margin: 0 10px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: $InterFont;
+        transition: 0.3s;
+        cursor: pointer;
+        &:nth-child(1) {
+          color: $redColor;
+          font-weight: $Bold;
+        }
+      }
+
+      li:hover {
+        color: $SecondaryColor;
+      }
+    }
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 20px;
+    .inputNavbar {
+      position: relative;
+      .input {
+        width: 220px;
+        height: 35px;
+        border: 1px solid #a7a6a6;
+        padding: 0 20px;
+        border-radius: 8px;
+        &:focus {
+          outline-color: $activeInput;
+        }
+      }
+      .search-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      
+      .signup-btn {
+        background: $primaryColor;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        height: 43px;
+        border-radius: 8px;
+        border: none;
+        list-style: none;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: $InterFont;
+        transition: 0.3s;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .signup-btn:hover {
+        background-color: $SecondaryColor;
+        color: $primaryColor;
+      }
+    }
+  }
+}

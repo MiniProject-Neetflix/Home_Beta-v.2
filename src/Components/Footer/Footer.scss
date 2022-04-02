@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;500&display=swap');
+
+//Colors
+$SecondaryColor: red;
+$primaryColor: white;
+
+//Typograpy
+$InterFont: 'Inter', sans-serif;
+$ExtraLight: 200;
+$Light: 300;
+$Regular: 400;
+$Medium: 500;
+$SemiBold: 600;
+$Bold: 700;
+
+
+.footer {
+  margin-top: 100px;
+  height: 256px;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .footer-top {
+    h1 {
+      font-weight: $Bold;
+      font-size: 20px;
+      font-family: $InterFont;
+    }
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      li {
+        list-style: none;
+        font-weight: $Regular;
+        font-family: $InterFont;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      li:hover {
+        background-color: $primaryColor;
+        color: black;
+      }
+    }
+  }
+  hr {
+    width: 80%;
+    margin: auto;
+    margin-bottom: -20px;
+    border: none;
+    box-shadow: 0 0 0 1px white;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    p {
+      font-weight: $Medium;
+      font-size: 14px;
+      font-family: $InterFont;
+      span {
+        font-weight: $Bold;
+        font-family: $InterFont;
+      }
+    }
+    ul {
+      display: flex;
+      width: 15%;
+      justify-content: space-between;
+      li {
+        display: flex;
+        justify-content: space-between;
+        .footer-icon {
+          font-size: 24px;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+        .footer-icon:hover {
+          transform: translateY(-10%) scale(107%);
+        }
+      }
+    }
+  }
+}
